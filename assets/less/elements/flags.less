@@ -1,0 +1,45 @@
+@import "../common";
+
+//== Flags
+.flag-icon-background() {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.eal-icon-flag {
+    position: relative;
+
+    display: inline-block;
+    width: unit((4 / 3), em);
+
+    .flag-icon-background();
+    line-height: 1em;
+
+    &:before {
+        content: "\00a0";
+    }
+}
+
+.flag-icon(@country) {
+    // Classes
+    .eal-icon-flag--@{country} {
+        background-image: ~"url(../img/flags/@{country}.svg)";
+    }
+}
+
+// Countries
+.flag-icon(br);
+.flag-icon(ca);
+.flag-icon(cn);
+.flag-icon(de);
+.flag-icon(es);
+.flag-icon(fr);
+.flag-icon(in);
+.flag-icon(it);
+.flag-icon(jp);
+.flag-icon(mx);
+.flag-icon(uk);
+.flag-icon(us);
+
+.flag-icon(eu);

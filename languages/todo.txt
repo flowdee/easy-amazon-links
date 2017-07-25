@@ -1,0 +1,6 @@
+Translating the plugin
+======================
+1.) Download and install PoEdit ( https://poedit.net/ ) or use another way to edit pot/po files
+2.) After finishing your plugin update the .pot file by via quellcode
+3.) Add a new translation based on the previously created/updated .pot file
+4.) When adding new translations, first update the .pot file, then updating the desired .po translation files
