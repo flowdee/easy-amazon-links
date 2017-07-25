@@ -31,6 +31,8 @@ function eal_admin_scripts( $hook ) {
         wp_enqueue_script( 'eal_admin_js', EAL_URL . 'public/js/admin' . $suffix . '.js', array( 'jquery' ), EAL_VER );
         wp_enqueue_style( 'eal_admin_css', EAL_URL . 'public/css/admin' . $suffix . '.css', false, EAL_VER );
     }
+
+    add_editor_style( EAL_URL . 'public/css/editor.css' );
 }
 add_action( 'admin_enqueue_scripts', 'eal_admin_scripts', 100 );
 

@@ -99,6 +99,8 @@ if( ! class_exists( 'Easy_Amazon_Links' ) ) {
 
             // Anything else
             require_once EAL_DIR . 'includes/functions.php';
+            require_once EAL_DIR . 'includes/hooks.php';
+            require_once EAL_DIR . 'includes/shortcodes.php';
         }
 
         /**

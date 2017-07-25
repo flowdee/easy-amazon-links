@@ -93,7 +93,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
 
             add_settings_field(
                 'eal_amazon_store',
-                __('Amazon Store', 'easy-amazon-links') . $req,
+                __('Amazon Store', 'easy-amazon-links'),
                 array(&$this, 'amazon_store_render'),
                 'eal_settings',
                 'eal_section_general',

@@ -26,6 +26,15 @@ module.exports = function (grunt) {
                 ],
                 dest: 'public/css/admin.min.css'
             },
+            editor: {
+                options: {
+                    cleancss: false
+                },
+                src: [
+                    'assets/less/editor.less'
+                ],
+                dest: 'public/css/editor.css'
+            },
             styles: {
                 options: {
                     cleancss: false
