@@ -100,6 +100,15 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
                 array('label_for' => 'eal_amazon_store')
             );
 
+            add_settings_field(
+                'eal_status',
+                __('Status', 'easy-amazon-links'),
+                array(&$this, 'status_render'),
+                'eal_settings',
+                'eal_section_general',
+                array('label_for' => 'eal_status')
+            );
+
         }
 
         function validate_input_callback( $input ) {
@@ -207,6 +216,19 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             </p>
             <?php
         }
+
+        function status_render() {
+
+            $status = ( isset ( $this->options['status'] ) && $this->options['status'] == '1' ) ? 1 : 0;
+            ?>
+
+            <input type="checkbox" id="eal_status" name="eal_settings[status]" value="1" <?php echo($status == 1 ? 'checked' : ''); ?> />
+            <label for="eal_status"><?php _e('Activate in order to do generate affiliate links', 'easy-amazon-links'); ?></label>
+            <?php
+        }
+
+
+
 
 
         function text_field_01_render() {

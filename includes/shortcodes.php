@@ -20,6 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function eal_add_shortcode( $atts, $content = '' ) {
 
+    if ( ! eal_is_active() )
+        return $content;
+
     $link_text = ( ! empty( $atts['text'] ) ) ? $atts['text'] : $content;
     $link_title = ( ! empty( $atts['title'] ) ) ? $atts['title'] : $link_text;
 

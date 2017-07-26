@@ -21,6 +21,18 @@ function eal_get_options() {
 }
 
 /**
+ * Check if plugin status is active
+ *
+ * @return bool
+ */
+function eal_is_active() {
+
+    $options = eal_get_options();
+
+    return ( isset( $options['status'] ) && '1' == $options['status'] ) ? true : false;
+}
+
+/**
  * Amazon Stores
  */
 function eal_get_amazon_stores() {
