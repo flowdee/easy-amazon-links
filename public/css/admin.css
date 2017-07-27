@@ -8,6 +8,9 @@
   display: none;
   color: red;
 }
+i.eal-tinymce-icon {
+  background-image: url('../img/tinymce-button.png');
+}
 .eal-icon-flag {
   position: relative;
   display: inline-block;

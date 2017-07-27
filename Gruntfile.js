@@ -71,6 +71,15 @@ module.exports = function (grunt) {
                 ],
                 dest: 'public/js/admin.min.js'
             },
+            tinymce_buttons: {
+                options: {
+                    beautify: true
+                },
+                src: [
+                    'assets/js/components/tinymce-buttons.js'
+                ],
+                dest: 'public/js/tinymce-buttons.js'
+            },
             scripts: {
                 options: {
                     beautify: true

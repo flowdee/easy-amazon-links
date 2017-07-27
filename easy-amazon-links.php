@@ -95,6 +95,7 @@ if( ! class_exists( 'Easy_Amazon_Links' ) ) {
             if ( is_admin() ) {
                 require_once EAL_DIR . 'includes/admin/plugins.php';
                 require_once EAL_DIR . 'includes/admin/class.settings.php';
+                require_once EAL_DIR . 'includes/admin/editor.php';
             }
 
             // Anything else
