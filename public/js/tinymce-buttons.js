@@ -2,7 +2,7 @@
     tinymce.PluginManager.add("columns", function(a, b) {
         var c = b.replace("/public/js/", "/public/img/") + "/tinymce-button.png";
         console.log(c), a.addButton("columns", {
-            title: "Add Amazon Affiliate Link",
+            title: "Easy Amazon Affiliate Link",
             cmd: "eal-link",
             icon: "icon eal-tinymce-icon"
         }), a.addCommand("eal-link", function() {

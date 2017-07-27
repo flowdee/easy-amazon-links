@@ -9,7 +9,7 @@
 
         // Add Button to Visual Editor Toolbar
         editor.addButton('columns', {
-            title: 'Add Amazon Affiliate Link',
+            title: 'Easy Amazon Affiliate Link',
             cmd: 'eal-link',
             icon: 'icon eal-tinymce-icon',
             //type: 'menubutton',

@@ -109,6 +109,15 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
                 array('label_for' => 'eal_status')
             );
 
+            add_settings_field(
+                'eal_link_icon',
+                __('Link Icon', 'easy-amazon-links'),
+                array(&$this, 'link_icon_render'),
+                'eal_settings',
+                'eal_section_general',
+                array('label_for' => 'eal_link_icon')
+            );
+
         }
 
         function validate_input_callback( $input ) {
@@ -224,6 +233,25 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
 
             <input type="checkbox" id="eal_status" name="eal_settings[status]" value="1" <?php echo($status == 1 ? 'checked' : ''); ?> />
             <label for="eal_status"><?php _e('Activate in order to generate affiliate links', 'easy-amazon-links'); ?></label>
+            <?php
+        }
+
+        function link_icon_render() {
+
+            $link_icon_options = array(
+                '' => __('Disabled', 'easy-amazon-links'),
+                'icon' => __('Amazon Icon', 'easy-amazon-links'),
+                'logo' => __('Amazon Logo', 'easy-amazon-links')
+            );
+
+            $link_icon = ( isset ( $this->options['link_icon'] ) ) ? $this->options['link_icon'] : '';
+
+            ?>
+            <select id="eal_link_icon" name="eal_settings[link_icon]">
+                <?php foreach ( $link_icon_options as $key => $label ) { ?>
+                    <option value="<?php echo $key; ?>" <?php selected( $link_icon, $key ); ?>><?php echo $label; ?></option>
+                <?php } ?>
+            </select>
             <?php
         }
 

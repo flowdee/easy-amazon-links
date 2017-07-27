@@ -1,0 +1,19 @@
+.eal-link__icon {
+  display: inline-block;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+.eal-link__icon--icon {
+  margin-left: 5px;
+  width: 16px;
+  background-image: url('../img/amazon-icon.png');
+  background-size: 16px 16px;
+}
+.eal-link__icon--logo {
+  margin-left: 7px;
+  width: 53.5px;
+  background-image: url('../img/amazon-logo.png');
+  background-size: 53.5px 16px;
+}
