@@ -82,6 +82,38 @@ function eal_get_amazon_associates_links() {
 }
 
 /**
+ * Get affiliate url
+ *
+ * @param array $args
+ * @return bool|string
+ */
+function eal_get_affiliate_url( $args = array() ) {
+
+    $options = eal_get_options();
+
+    if ( empty( $options['amazon_store'] ) )
+        return false;
+
+    $store = $options['amazon_store'];
+
+    $url = ( 'com' === $store ) ? 'https://amzn.com/' : 'https://amazon.' . $store . '/';
+
+    // Detail page
+    if ( ! empty( $args['asin'] ) ) {
+        $url .= 'dp/' . $args['asin'] . '/';
+
+    // Search results
+    } elseif ( ! empty( $args['search'] ) ) {
+        $url = add_query_arg( 's', $args['search'], $url );
+    }
+
+    if ( ! empty( $options['amazon_tracking_ids'][$store] ) )
+        $url = add_query_arg( 'tag', $options['amazon_tracking_ids'][$store], $url );
+
+    return $url;
+}
+
+/**
  * Display icon flag html
  *
  * @param $store
@@ -105,17 +137,4 @@ function eal_get_icon_flag( $store ) {
     $store = str_replace( array( 'co.', 'com.', 'com' ), array( '', '', 'us' ), $store );
 
     return '<span class="eal-icon-flag eal-icon-flag--' . esc_html( $store ) . '"></span>';
-}
-
-/**
- * Example function which uses your settings
- */
-function eal_my_first_function() {
-
-    // Using the plugin option on any place
-    $options = eal_get_options();
-
-    if ( isset( $options['select_01'] ) ) {
-        echo $options['select_01'];
-    }
 }

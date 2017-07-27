@@ -33,9 +33,9 @@ function eal_add_shortcode( $atts, $content = '' ) {
     $link_search = ( ! empty( $atts['search'] ) ) ? $atts['search'] : $link_text;
 
     if ( $link_asin ) {
-        $link_url = 'https://amazon.de/dp/' . $link_asin . '/';
+        $link_url = eal_get_affiliate_url( array( 'asin' => $link_asin ) );
     } else {
-        $link_url = add_query_arg( 's', $link_search, 'https://amazon.de/' );
+        $link_url = eal_get_affiliate_url( array( 'search' => $link_search ) );
     }
 
     if ( ! empty( $link_url ) && ! empty( $link_title ) && ! empty( $link_text ) ) {
