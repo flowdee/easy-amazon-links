@@ -223,7 +223,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             ?>
 
             <input type="checkbox" id="eal_status" name="eal_settings[status]" value="1" <?php echo($status == 1 ? 'checked' : ''); ?> />
-            <label for="eal_status"><?php _e('Activate in order to do generate affiliate links', 'easy-amazon-links'); ?></label>
+            <label for="eal_status"><?php _e('Activate in order to generate affiliate links', 'easy-amazon-links'); ?></label>
             <?php
         }
 
