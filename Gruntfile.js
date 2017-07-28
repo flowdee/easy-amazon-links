@@ -67,7 +67,7 @@ module.exports = function (grunt) {
             },
             admin_min: {
                 src: [
-                    'assets/js/admin.js'
+                    'public/js/admin.js'
                 ],
                 dest: 'public/js/admin.min.js'
             },
@@ -85,13 +85,14 @@ module.exports = function (grunt) {
                     beautify: true
                 },
                 src: [
+                    'assets/js/components/geotargeting.js',
                     'assets/js/scripts.js'
                 ],
                 dest: 'public/js/scripts.js'
             },
             scripts_min: {
                 src: [
-                    'assets/js/scripts.js'
+                    'public/js/scripts.js'
                 ],
                 dest: 'public/js/scripts.min.js'
             }

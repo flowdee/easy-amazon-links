@@ -45,7 +45,7 @@ function eal_add_shortcode( $atts, $content = '' ) {
         if ( ! empty( $options['link_icon'] ) )
             $link_classes .= ' eal-link--icon';
 
-        $link = '<a class="' . esc_html( $link_classes ) . '" href="' . esc_url( $link_url ) . '" title="' . esc_html( $link_title ) . '" target="_blank" rel="nofollow"';
+        $link = '<a data-eal-link="true" class="' . esc_html( $link_classes ) . '" href="' . esc_url( $link_url ) . '" title="' . esc_html( $link_title ) . '" target="_blank" rel="nofollow"';
 
         if ( $link_asin )
             $link .= ' data-eal-asin="' . esc_html( $link_asin ) . '"';

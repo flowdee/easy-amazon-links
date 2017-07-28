@@ -118,6 +118,15 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
                 array('label_for' => 'eal_link_icon')
             );
 
+            add_settings_field(
+                'eal_geotargeting',
+                __('Geotargeting', 'easy-amazon-links'),
+                array(&$this, 'geotargeting_render'),
+                'eal_settings',
+                'eal_section_general',
+                array('label_for' => 'eal_geotargeting')
+            );
+
         }
 
         function validate_input_callback( $input ) {
@@ -254,6 +263,17 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             </select>
             <?php
         }
+
+        function geotargeting_render() {
+
+            $geotargeting = ( isset ( $this->options['geotargeting'] ) && $this->options['geotargeting'] == '1' ) ? 1 : 0;
+            ?>
+
+            <input type="checkbox" id="eal_geotargeting" name="eal_settings[geotargeting]" value="1" <?php echo($geotargeting == 1 ? 'checked' : ''); ?> />
+            <label for="eal_geotargeting"><?php _e('Activate in order to geotargeting functionality', 'easy-amazon-links'); ?></label>
+            <?php
+        }
+
 
 
 
