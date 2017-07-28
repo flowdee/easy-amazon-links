@@ -104,7 +104,8 @@ function eal_get_affiliate_url( $args = array() ) {
 
     // Search results
     } elseif ( ! empty( $args['search'] ) ) {
-        $url = add_query_arg( 's', $args['search'], $url );
+        $url .= 's/';
+        $url = add_query_arg( 'field-keywords', $args['search'], $url );
     }
 
     if ( ! empty( $options['amazon_tracking_ids'][$store] ) )
