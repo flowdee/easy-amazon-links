@@ -16,7 +16,9 @@
       "last_translator": "flowdee <mail@flowdee.de>"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "js-cookie": "^2.1.4"
+  },
   "devDependencies": {
     "clean-css": "^3.4.18",
     "grunt": "^1.0.1",

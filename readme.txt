@@ -8,48 +8,36 @@ Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Easy Amazon Link
+Easily create text affiliate links for Amazon Associates
 
 == Description ==
-With Online Learning Courses you can display single courses by their ID or even search for courses by keywords and language.
+With Easy Amazon Links you can easily create text links including your affiliate tracking id and earn commissions as Amazon Associates partner.
 
 = Features =
 
-*   This plugin allows you to display Udemy™ courses and lead your visitors directly to the course pages
-*   Display single courses by ID
-*   Search for courses by keyword (API keys required)
-*   Select between the following layouts: Standard Boxes, Grids & Lists
-*   Select between the following styles: Standard, Clean, Light & Dark
-*   Two separate widgets for single courses and searches
+*   Creating text affiliate links for Amazon Associates
+*   No API keys required
+*   Supporting all available countries/stores
+*   Geotargeting functionality
+*   TinyMCE button for quick link generation
+*   Handy shortcode for customizations
 *   Configuration page for more options
-*   Try out the **[online demo](https://coder.flowdee.de/demo/wp-udemy/)**
-*   Regular updates and improvements: Go though the [changelog](https://wordpress.org/plugins/wp-udemy/changelog/)
+*   Regular updates and improvements: Go though the [changelog](https://wordpress.org/plugins/easy-amazon-links/changelog/)
 
 = Quickstart Examples =
 
-* Single courses: [ufwp id="518498"]
-* Keyword search: [ufwp search="css" items="3" lang="de"]
-
-= More features with the PRO version =
-
-The PRO version extends this plugins exclusively with our affiliate link feature and many more:
-
-*   Affiliate Links
-*   Masked Links
-*   Click Tracking
-*   Custom Templates
-
-Details and upgrade can be found **[here](https://coder.flowdee.de/downloads/wp-udemy-pro/)**.
+* Setup tracking id(s)
+* select your default store
+* Handy shortcode: e.g. [eal]Amazon Echo Dot[/eal]
 
 = Support =
 
-* Detailed online [documentation](https://coder.flowdee.de/docs/article/wp-udemy/)
-* Browse [issue tracker](https://github.com/flowdee/wp-udemy/issues) on GitHub
+* Browse [issue tracker](https://github.com/flowdee/easy-amazon-links/issues) on GitHub
 * [Follow me on Twitter](https://twitter.com/flowdee) to stay in contact and informed about updates
 
 = Credits =
 
-* This plugin is not official made or maintained by Udemy™. All data provided through the official Udemy™ API.
+* This plugin is not official made or maintained by Amazon.
 
 == Installation ==
 
@@ -58,7 +46,7 @@ The installation and configuration of the plugin is as simple as it can be.
 = Using The WordPress Dashboard =
 
 1. Navigate to the 'Add New' in the plugins dashboard
-2. Search for 'online learning courses'
+2. Search for 'easy amazon links'
 3. Click 'Install Now'
 4. Activate the plugin on the Plugin dashboard
 
@@ -79,29 +67,11 @@ The installation and configuration of the plugin is as simple as it can be.
 
 == Frequently Asked Questions ==
 
-= How do I display a course? =
+= How do I create an affiliate link? =
 
-The default shortcode expects a course ID which can be found after adding the course to the cart and taking the ID out of the url of your browser.
+Go to your post/page editor, mark a text and hit our TinyMCE button.
 
-[ufwp id="518498"]
-
-Additionally you can string together multiple ids and display multiple courses at once:
-
-[ufwp id="41305,597898"]
-
-More information about the shortcodes can be found in our online [documentation](https://coder.flowdee.de/docs/article/udemy-for-wordpress/).
-
-= How do search for courses? =
-
-Instead of selecting specific ids you can search for courses by keywords.
-
-[ufwp search="css" items="3" lang="de"]
-
-More information about the shortcodes can be found in our online [documentation](https://coder.flowdee.de/docs/article/udemy-for-wordpress/).
-
-= How do I change the template or style? =
-
-All available templates and styles, as well as further instructions, can be found in our online [documentation](https://coder.flowdee.de/docs/article/wp-udemy/).
+Alternatively you can use our shortcode: e.g. [eal]Amazon Echo Dot[/eal]
 
 = Multisite supported? =
 
@@ -110,7 +80,7 @@ Yes of course.
 == Screenshots ==
 
 1. Editor
-2. Admin: Settings page
+2. Settings page
 
 == Changelog ==
 

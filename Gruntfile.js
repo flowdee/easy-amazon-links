@@ -208,6 +208,6 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['less', 'uglify', 'autoprefixer', 'copy']);
 
     // Update finish
-    //grunt.registerTask( 'build:translations', [ 'checktextdomain', 'makepot', 'newer:potomo' ] ); // TODO
-    grunt.registerTask( 'build', [ 'clean', 'copy', 'compress' ] );
+    grunt.registerTask( 'translations', [ 'checktextdomain' ] );
+    //grunt.registerTask( 'build', [ 'clean', 'copy', 'compress' ] );
 };

@@ -8,7 +8,7 @@
         // https://www.tinymce.com/docs/demo/custom-toolbar-menu-button/
 
         // Add Button to Visual Editor Toolbar
-        editor.addButton('columns', {
+        editor.addButton('eal', {
             title: 'Easy Amazon Affiliate Link',
             cmd: 'eal-link',
             icon: 'icon eal-tinymce-icon',

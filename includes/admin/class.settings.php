@@ -54,7 +54,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             // Section: Quickstart
             add_settings_section(
                 'eal_settings_section_quickstart',
-                __('Quickstart Guide', 'affiliate-coupons'),
+                __('Quickstart Guide', 'easy-amazon-links'),
                 array( &$this, 'section_quickstart_render' ),
                 'eal_settings'
             );
@@ -142,31 +142,31 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             ?>
 
             <div class="postbox">
-                <h3 class='hndle'><?php _e('Quickstart Guide', 'affiliate-coupons'); ?></h3>
+                <h3 class='hndle'><?php _e('Quickstart Guide', 'easy-amazon-links'); ?></h3>
                 <div class="inside">
                     <p>
-                        <strong><?php _e( 'First Steps', 'affiliate-coupons' ); ?></strong>
+                        <strong><?php _e( 'First Steps', 'easy-amazon-links' ); ?></strong>
                     </p>
                     <ol>
-                        <li><?php _e( 'Create vendors', 'affiliate-coupons' ); ?></li>
-                        <li><?php _e( 'Create coupons', 'affiliate-coupons' ); ?></li>
-                        <li><?php _e( 'Link coupons to vendors', 'affiliate-coupons' ); ?></li>
-                        <li><?php _e( 'Assign categories and/or types to coupons if needed', 'affiliate-coupons' ); ?></li>
-                        <li><?php _e( 'Display coupons inside your posts/pages by using shortcodes', 'affiliate-coupons' ); ?></li>
+                        <li><?php _e( 'Create vendors', 'easy-amazon-links' ); ?></li>
+                        <li><?php _e( 'Create coupons', 'easy-amazon-links' ); ?></li>
+                        <li><?php _e( 'Link coupons to vendors', 'easy-amazon-links' ); ?></li>
+                        <li><?php _e( 'Assign categories and/or types to coupons if needed', 'easy-amazon-links' ); ?></li>
+                        <li><?php _e( 'Display coupons inside your posts/pages by using shortcodes', 'easy-amazon-links' ); ?></li>
                     </ol>
 
                     <p>
-                        <strong><?php _e( 'Show all coupons', 'affiliate-coupons' ); ?></strong>
+                        <strong><?php _e( 'Show all coupons', 'easy-amazon-links' ); ?></strong>
                     </p>
                     <p>
                         <code>[affcoups]</code>
                     </p>
 
                     <p>
-                        <strong><?php _e( 'Show single coupons', 'affiliate-coupons' ); ?></strong>
+                        <strong><?php _e( 'Show single coupons', 'easy-amazon-links' ); ?></strong>
                     </p>
                     <p>
-                        <code>[affcoups id="123"]</code> <?php _e( 'or', 'affiliate-coupons' ); ?> <code>[affcoups id="123,456,789"]</code>
+                        <code>[affcoups id="123"]</code> <?php _e( 'or', 'easy-amazon-links' ); ?> <code>[affcoups id="123,456,789"]</code>
                     </p>
 
                     <?php do_action( 'eal_settings_quickstart_render' ); ?>
@@ -271,59 +271,6 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
 
             <input type="checkbox" id="eal_geotargeting" name="eal_settings[geotargeting]" value="1" <?php echo($geotargeting == 1 ? 'checked' : ''); ?> />
             <label for="eal_geotargeting"><?php _e('Activate in order to geotargeting functionality', 'easy-amazon-links'); ?></label>
-            <?php
-        }
-
-
-
-
-
-
-        function text_field_01_render() {
-
-            $text = ( ! empty($this->options['text_01'] ) ) ? esc_attr( trim($this->options['text_01'] ) ) : ''
-
-            ?>
-            <input type="text" name="eal_settings[text_01]" id="eal_text_field_01" value="<?php echo esc_attr( trim( $text ) ); ?>" />
-            <?php
-        }
-
-        function select_field_01_render() {
-
-            $select_options = array(
-                '0' => __('Please select...', 'easy-amazon-links'),
-                '1' => __('Option One', 'easy-amazon-links'),
-                '2' => __('Option Two', 'easy-amazon-links'),
-                '3' => __('Option Three', 'easy-amazon-links')
-            );
-
-            $selected = ( isset ( $this->options['select_01'] ) ) ? $this->options['select_01'] : '0';
-
-            ?>
-            <select id="eal_select_field_01" name="eal_settings[select_01]">
-                <?php foreach ( $select_options as $key => $label ) { ?>
-                    <option value="<?php echo $key; ?>" <?php selected( $selected, $key ); ?>><?php echo $label; ?></option>
-                <?php } ?>
-            </select>
-            <?php
-        }
-
-        function checkbox_field_01_render() { 
-
-            $checked = ( isset ( $this->options['checkbox_01'] ) && $this->options['checkbox_01'] == '1' ) ? 1 : 0;
-            ?>
-
-                <input type="checkbox" id="eal_checkbox_field_01" name="eal_settings[checkbox_01]" value="1" <?php echo($checked == 1 ? 'checked' : ''); ?> />
-                <label for="eal_checkbox_field_01"><?php _e('Activate in order to do some cool stuff.', 'easy-amazon-links'); ?></label>
-            <?php
-        }
-
-        function text_field_02_render() {
-
-            $text = ( ! empty($this->options['text_02'] ) ) ? esc_attr( trim($this->options['text_02'] ) ) : ''
-
-            ?>
-            <input type="text" name="eal_settings[text_02]" id="eal_text_field_02" value="<?php echo esc_attr( trim( $text ) ); ?>" />
             <?php
         }
 

@@ -1,0 +1,213 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Easy Amazon Links\n"
+"POT-Creation-Date: 2017-07-29 14:18+0200\n"
+"PO-Revision-Date: 2017-07-29 14:17+0200\n"
+"Last-Translator: flowdee <coder@flowdee.de>\n"
+"Language-Team: flowdee <coder@flowdee.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: easy-amazon-links.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: assets\n"
+"X-Poedit-SearchPathExcluded-2: public\n"
+"X-Poedit-SearchPathExcluded-3: node_modules\n"
+
+#: includes/admin/class.settings.php:57 includes/admin/class.settings.php:145
+msgid "Quickstart Guide"
+msgstr ""
+
+#: includes/admin/class.settings.php:65
+msgid "Amazon Tracking IDs"
+msgstr ""
+
+#: includes/admin/class.settings.php:89
+msgid "General Settings"
+msgstr ""
+
+#: includes/admin/class.settings.php:96
+msgid "Amazon Store"
+msgstr ""
+
+#: includes/admin/class.settings.php:105
+msgid "Status"
+msgstr ""
+
+#: includes/admin/class.settings.php:114
+msgid "Link Icon"
+msgstr ""
+
+#: includes/admin/class.settings.php:123
+msgid "Geotargeting"
+msgstr ""
+
+#: includes/admin/class.settings.php:148
+msgid "First Steps"
+msgstr ""
+
+#: includes/admin/class.settings.php:151
+msgid "Create vendors"
+msgstr ""
+
+#: includes/admin/class.settings.php:152
+msgid "Create coupons"
+msgstr ""
+
+#: includes/admin/class.settings.php:153
+msgid "Link coupons to vendors"
+msgstr ""
+
+#: includes/admin/class.settings.php:154
+msgid "Assign categories and/or types to coupons if needed"
+msgstr ""
+
+#: includes/admin/class.settings.php:155
+msgid "Display coupons inside your posts/pages by using shortcodes"
+msgstr ""
+
+#: includes/admin/class.settings.php:159
+msgid "Show all coupons"
+msgstr ""
+
+#: includes/admin/class.settings.php:166
+msgid "Show single coupons"
+msgstr ""
+
+#: includes/admin/class.settings.php:169
+msgid "or"
+msgstr ""
+
+#: includes/admin/class.settings.php:195
+msgid "Get local Tracking ID"
+msgstr ""
+
+#: includes/admin/class.settings.php:214 includes/admin/class.settings.php:294
+msgid "Please select..."
+msgstr ""
+
+#: includes/admin/class.settings.php:233
+msgid "Please select your default Amazon store."
+msgstr ""
+
+#: includes/admin/class.settings.php:244
+msgid "Activate in order to generate affiliate links"
+msgstr ""
+
+#: includes/admin/class.settings.php:251
+msgid "Disabled"
+msgstr ""
+
+#: includes/admin/class.settings.php:252
+msgid "Amazon Icon"
+msgstr ""
+
+#: includes/admin/class.settings.php:253
+msgid "Amazon Logo"
+msgstr ""
+
+#: includes/admin/class.settings.php:273
+msgid "Activate in order to geotargeting functionality"
+msgstr ""
+
+#: includes/admin/class.settings.php:295
+msgid "Option One"
+msgstr ""
+
+#: includes/admin/class.settings.php:296
+msgid "Option Two"
+msgstr ""
+
+#: includes/admin/class.settings.php:297
+msgid "Option Three"
+msgstr ""
+
+#: includes/admin/class.settings.php:317
+msgid "Activate in order to do some cool stuff."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: includes/admin/class.settings.php:336
+msgid "Easy Amazon Links"
+msgstr ""
+
+#: includes/admin/plugins.php:21
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/plugins.php:50
+msgid "Example Link"
+msgstr ""
+
+#: includes/functions.php:41
+msgid "Brazil"
+msgstr ""
+
+#: includes/functions.php:42
+msgid "Canada"
+msgstr ""
+
+#: includes/functions.php:43
+msgid "China"
+msgstr ""
+
+#: includes/functions.php:44
+msgid "Germany"
+msgstr ""
+
+#: includes/functions.php:45
+msgid "Spain"
+msgstr ""
+
+#: includes/functions.php:46
+msgid "France"
+msgstr ""
+
+#: includes/functions.php:47
+msgid "India"
+msgstr ""
+
+#: includes/functions.php:48
+msgid "Italy"
+msgstr ""
+
+#: includes/functions.php:49
+msgid "Japan"
+msgstr ""
+
+#: includes/functions.php:50
+msgid "Mexico"
+msgstr ""
+
+#: includes/functions.php:51
+msgid "UK"
+msgstr ""
+
+#: includes/functions.php:52
+msgid "US"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/easy-amazon-links/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Plugin Description."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "flowdee"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://coder.flowdee.de"
+msgstr ""

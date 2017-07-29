@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * Source: https://www.gavick.com/blog/wordpress-tinymce-custom-buttons
  */
 
-function mythemeslug_buttons() {
+function eal_tinymce_buttons() {
     if ( ! current_user_can( 'edit_posts' ) && ! current_user_can( 'edit_pages' ) ) {
         return;
     }
@@ -23,17 +23,17 @@ function mythemeslug_buttons() {
         return;
     }
 
-    add_filter( 'mce_external_plugins', 'mythemeslug_add_buttons' );
+    add_filter( 'mce_external_plugins', 'eal_add_tinymce_buttons' );
     add_filter( 'mce_buttons', 'mythemeslug_register_buttons' );
 }
-add_action( 'init', 'mythemeslug_buttons' );
+add_action( 'init', 'eal_tinymce_buttons' );
 
-function mythemeslug_add_buttons( $plugin_array ) {
-    $plugin_array['columns'] = EAL_URL .'public/js/tinymce-buttons.js';
+function eal_add_tinymce_buttons( $plugin_array ) {
+    $plugin_array['eal'] = EAL_URL .'public/js/tinymce-buttons.js';
     return $plugin_array;
 }
 
-function mythemeslug_register_buttons( $buttons ) {
-    array_push( $buttons, 'columns' );
+function eal_register_tinymce_buttons( $buttons ) {
+    array_push( $buttons, 'eal' );
     return $buttons;
 }
