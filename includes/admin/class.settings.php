@@ -145,28 +145,54 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
                 <h3 class='hndle'><?php _e('Quickstart Guide', 'easy-amazon-links'); ?></h3>
                 <div class="inside">
                     <p>
-                        <strong><?php _e( 'First Steps', 'easy-amazon-links' ); ?></strong>
+                        <strong><?php _e( 'Plugin Configuration', 'easy-amazon-links' ); ?></strong>
                     </p>
                     <ol>
-                        <li><?php _e( 'Create vendors', 'easy-amazon-links' ); ?></li>
-                        <li><?php _e( 'Create coupons', 'easy-amazon-links' ); ?></li>
-                        <li><?php _e( 'Link coupons to vendors', 'easy-amazon-links' ); ?></li>
-                        <li><?php _e( 'Assign categories and/or types to coupons if needed', 'easy-amazon-links' ); ?></li>
-                        <li><?php _e( 'Display coupons inside your posts/pages by using shortcodes', 'easy-amazon-links' ); ?></li>
+                        <li><?php _e( 'Enter your tracking id(s)', 'easy-amazon-links' ); ?></li>
+                        <li><?php _e( 'Select your default store', 'easy-amazon-links' ); ?></li>
+                        <li><?php _e( 'Activate geotargeting in case you want to redirect visitors to their local stores (optional)', 'easy-amazon-links' ); ?></li>
+                        <li><?php _e( "That's it!", 'easy-amazon-links' ); ?></li>
                     </ol>
 
                     <p>
-                        <strong><?php _e( 'Show all coupons', 'easy-amazon-links' ); ?></strong>
+                        <strong><?php _e( 'Creating affiliate links', 'easy-amazon-links' ); ?></strong>
                     </p>
+                    <ol>
+                        <li><?php _e( 'Mark the text you want to add a link to: e.g. "Amazon Echo Dot"', 'easy-amazon-links' ); ?></li>
+                        <li><?php _e( 'Iit our TinyMCE editor button', 'easy-amazon-links' ); ?></li>
+                        <li><?php _e( 'Finished!', 'easy-amazon-links' ); ?></li>
+                    </ol>
+
                     <p>
-                        <code>[affcoups]</code>
+                        <strong><?php _e( 'Shortcodes', 'easy-amazon-links' ); ?></strong>
                     </p>
 
                     <p>
-                        <strong><?php _e( 'Show single coupons', 'easy-amazon-links' ); ?></strong>
+                        <?php _e( 'Alternatively you can create affiliate links by using our shortcodes which allow you more customization options:', 'easy-amazon-links' ); ?>
                     </p>
                     <p>
-                        <code>[affcoups id="123"]</code> <?php _e( 'or', 'easy-amazon-links' ); ?> <code>[affcoups id="123,456,789"]</code>
+                        <code>[eal]Amazon Echo Dot[/eal]</code>
+                    </p>
+
+                    <p>
+                        <?php _e( 'Sometimes the link text must be different, which can be done as follows:', 'easy-amazon-links' ); ?>
+                    </p>
+                    <p>
+                        <code>[eal search="amazon echo dot case"]Best Echo Dot Cases[/eal]</code>
+                    </p>
+
+                    <p>
+                        <?php _e( 'Additionally the link title can be updated as follows:', 'easy-amazon-links' ); ?>
+                    </p>
+                    <p>
+                        <code>[eal title="View Ecto Dot Cases on Amazon"]Best Echo Dot Cases[/eal]</code>
+                    </p>
+
+                    <p>
+                        <?php _e( 'In case you want to link a certain product detail page, pass the ASIN over to the shortcode:', 'easy-amazon-links' ); ?>
+                    </p>
+                    <p>
+                        <code>[eal asin="B01DFKC2SO"]Amazon Echo Dot[/eal]</code> <?php _e( 'or', 'easy-amazon-links' ); ?> <code>[eal asin="B01DFKC2SO"]Get your Echo Dot here[/eal]</code>
                     </p>
 
                     <?php do_action( 'eal_settings_quickstart_render' ); ?>
