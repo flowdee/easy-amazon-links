@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Easy Amazon Links
  * Plugin URI:      https://wordpress.org/plugins/easy-amazon-links/
- * Description:     Plugin Description.
+ * Description:     Easily create text affiliate links for Amazon Associates
  * Version:         1.0.0
  * Author:          flowdee
  * Author URI:      https://coder.flowdee.de
