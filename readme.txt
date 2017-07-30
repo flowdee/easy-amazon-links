@@ -16,7 +16,8 @@ With Easy Amazon Links you can easily create text links including your affiliate
 = Features =
 
 *   Creating text affiliate links for Amazon Associates
-*   No API keys required
+*   No Amazon API keys required
+*   Two link types available: Search result (default) and product detail page (by ASIN)
 *   Supporting all available countries/stores
 *   Geotargeting functionality
 *   TinyMCE button for quick link generation
@@ -27,8 +28,9 @@ With Easy Amazon Links you can easily create text links including your affiliate
 = Quickstart Examples =
 
 * Setup tracking id(s)
-* select your default store
-* Handy shortcode: e.g. [eal]Amazon Echo Dot[/eal]
+* Select your default store
+* Activate geotargeting in case you want to redirect visitors to their local stores (optional)
+* Create affiliate links via TinyMCE editor button or shortcode: e.g. [eal]Amazon Echo Dot[/eal]
 
 = Support =
 
@@ -79,15 +81,14 @@ Yes of course.
 
 == Screenshots ==
 
-1. Editor
-2. Settings page
+1. Settings page
 
 == Changelog ==
 
-= Version 1.0.0 (30th July 2016) =
+= Version 1.0.0 (31th July 2016) =
 * Initial release
 
 == Upgrade Notice ==
 
-= Version 1.0.0 (30th July 2016) =
+= Version 1.0.0 (31th July 2016) =
 * Initial release

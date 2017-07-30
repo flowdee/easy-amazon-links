@@ -1,7 +1,7 @@
 # Easy Amazon Links
 ![Plugin Version](https://img.shields.io/wordpress/plugin/v/easy-amazon-links.svg "Plugin Version") ![WordPress Version Compatibility](https://img.shields.io/wordpress/v/easy-amazon-links.svg "WordPress Version Compatibility") ![Downloads](https://img.shields.io/wordpress/plugin/dt/easy-amazon-links.svg "Downloads") ![Rating](https://img.shields.io/wordpress/plugin/r/easy-amazon-links.svg "Rating")
 
-Easy Amazon Links
+Easily create text affiliate links for Amazon Associates
 
 ## Description
 
