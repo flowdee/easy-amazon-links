@@ -41,8 +41,6 @@ With Easy Amazon Links you can easily create text links including your affiliate
 
 This plugin is not official made or maintained by Amazon.
 
-In order to redirect your site visitors to their nearest Amazon store, the plugin needs to find out their country. This is done by passing their IP to the API of the following services: [ipinfo.io](https://ipinfo.io/) and [freegeoip.net](https://freegeoip.net/)
-
 == Installation ==
 
 The installation and configuration of the plugin is as simple as it can be.
@@ -76,6 +74,14 @@ The installation and configuration of the plugin is as simple as it can be.
 Go to your post/page editor, mark a text and hit our TinyMCE button.
 
 Alternatively you can use our shortcode: e.g. [eal]Amazon Echo Dot[/eal]
+
+= How does geotargeting work exactly? =
+
+In order to redirect your site visitors to their nearest Amazon store, the plugin needs to find out their country. This is done by passing their IP to the API of the following services: [ipinfo.io](https://ipinfo.io/) and [freegeoip.net](https://freegeoip.net/). Additionally the country will be stored for a few hours in a cookie.
+
+Now all plugin generated affiliate links will be replaced by using the local tracking ids you entered on the plugin settings page before.
+
+Geotargeting is an optional feature and must be expressly activated.
 
 = Multisite supported? =
 
