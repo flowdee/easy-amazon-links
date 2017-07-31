@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Easy Amazon Links\n"
-"POT-Creation-Date: 2017-07-29 14:18+0200\n"
+"POT-Creation-Date: 2017-07-31 09:00+0200\n"
 "PO-Revision-Date: 2017-07-29 14:17+0200\n"
 "Last-Translator: flowdee <coder@flowdee.de>\n"
 "Language-Team: flowdee <coder@flowdee.de>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "X-Poedit-WPHeader: easy-amazon-links.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: assets\n"
@@ -52,91 +52,113 @@ msgid "Geotargeting"
 msgstr ""
 
 #: includes/admin/class.settings.php:148
-msgid "First Steps"
+msgid "Plugin Configuration"
 msgstr ""
 
 #: includes/admin/class.settings.php:151
-msgid "Create vendors"
+msgid "Enter your tracking id(s)"
 msgstr ""
 
 #: includes/admin/class.settings.php:152
-msgid "Create coupons"
+msgid "Select your default store"
 msgstr ""
 
 #: includes/admin/class.settings.php:153
-msgid "Link coupons to vendors"
+msgid ""
+"Activate geotargeting in case you want to redirect visitors to their local "
+"stores (optional)"
 msgstr ""
 
 #: includes/admin/class.settings.php:154
-msgid "Assign categories and/or types to coupons if needed"
+msgid "That's it!"
 msgstr ""
 
-#: includes/admin/class.settings.php:155
-msgid "Display coupons inside your posts/pages by using shortcodes"
+#: includes/admin/class.settings.php:158
+msgid "Creating affiliate links"
 msgstr ""
 
-#: includes/admin/class.settings.php:159
-msgid "Show all coupons"
+#: includes/admin/class.settings.php:161
+msgid "Mark the text you want to add a link to: e.g. \"Amazon Echo Dot\""
 msgstr ""
 
-#: includes/admin/class.settings.php:166
-msgid "Show single coupons"
+#: includes/admin/class.settings.php:162
+msgid "Iit our TinyMCE editor button"
 msgstr ""
 
-#: includes/admin/class.settings.php:169
-msgid "or"
+#: includes/admin/class.settings.php:163
+msgid "Finished!"
+msgstr ""
+
+#: includes/admin/class.settings.php:167
+msgid "Shortcodes"
+msgstr ""
+
+#: includes/admin/class.settings.php:171
+msgid ""
+"Alternatively you can create affiliate links by using our shortcodes which "
+"allow you more customization options:"
+msgstr ""
+
+#: includes/admin/class.settings.php:178
+msgid ""
+"Sometimes the link text must be different, which can be done as follows:"
+msgstr ""
+
+#: includes/admin/class.settings.php:185
+msgid "Additionally the link title can be updated as follows:"
+msgstr ""
+
+#: includes/admin/class.settings.php:192
+msgid ""
+"In case you want to link a certain product detail page, pass the ASIN over "
+"to the shortcode:"
 msgstr ""
 
 #: includes/admin/class.settings.php:195
+msgid "or"
+msgstr ""
+
+#: includes/admin/class.settings.php:221
 msgid "Get local Tracking ID"
 msgstr ""
 
-#: includes/admin/class.settings.php:214 includes/admin/class.settings.php:294
+#: includes/admin/class.settings.php:240
 msgid "Please select..."
 msgstr ""
 
-#: includes/admin/class.settings.php:233
+#: includes/admin/class.settings.php:259
 msgid "Please select your default Amazon store."
 msgstr ""
 
-#: includes/admin/class.settings.php:244
+#: includes/admin/class.settings.php:270
 msgid "Activate in order to generate affiliate links"
 msgstr ""
 
-#: includes/admin/class.settings.php:251
+#: includes/admin/class.settings.php:277
 msgid "Disabled"
 msgstr ""
 
-#: includes/admin/class.settings.php:252
+#: includes/admin/class.settings.php:278
 msgid "Amazon Icon"
 msgstr ""
 
-#: includes/admin/class.settings.php:253
+#: includes/admin/class.settings.php:279
 msgid "Amazon Logo"
 msgstr ""
 
-#: includes/admin/class.settings.php:273
+#: includes/admin/class.settings.php:299
 msgid "Activate in order to geotargeting functionality"
 msgstr ""
 
-#: includes/admin/class.settings.php:295
-msgid "Option One"
-msgstr ""
-
-#: includes/admin/class.settings.php:296
-msgid "Option Two"
-msgstr ""
-
-#: includes/admin/class.settings.php:297
-msgid "Option Three"
-msgstr ""
-
-#: includes/admin/class.settings.php:317
-msgid "Activate in order to do some cool stuff."
+#: includes/admin/class.settings.php:301
+msgid ""
+"In order to redirect your site visitors to their nearest Amazon store, the "
+"plugin needs to find out their country. This is done by passing their IP to "
+"the API of the following services:"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: includes/admin/class.settings.php:336
+#: includes/admin/class.settings.php:313
 msgid "Easy Amazon Links"
 msgstr ""
 
@@ -201,7 +223,7 @@ msgid "https://wordpress.org/plugins/easy-amazon-links/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Plugin Description."
+msgid "Easily create text affiliate links for Amazon Associates"
 msgstr ""
 
 #. Author of the plugin/theme

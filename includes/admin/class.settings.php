@@ -297,6 +297,10 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
 
             <input type="checkbox" id="eal_geotargeting" name="eal_settings[geotargeting]" value="1" <?php echo($geotargeting == 1 ? 'checked' : ''); ?> />
             <label for="eal_geotargeting"><?php _e('Activate in order to geotargeting functionality', 'easy-amazon-links'); ?></label>
+            <p class="description">
+                <?php _e('In order to redirect your site visitors to their nearest Amazon store, the plugin needs to find out their country. This is done by passing their IP to the API of the following services:', 'easy-amazon-links' ); ?>
+                 <a href="https://ipinfo.io" target="_blank" rel="nofollow">ipinfo.io</a>, <a href="https://freegeoip.net/" target="_blank" rel="nofollow">freegeoip.net</a>
+            </p>
             <?php
         }
 

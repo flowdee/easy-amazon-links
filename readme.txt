@@ -39,7 +39,9 @@ With Easy Amazon Links you can easily create text links including your affiliate
 
 = Credits =
 
-* This plugin is not official made or maintained by Amazon.
+This plugin is not official made or maintained by Amazon.
+
+In order to redirect your site visitors to their nearest Amazon store, the plugin needs to find out their country. This is done by passing their IP to the API of the following services: [ipinfo.io](https://ipinfo.io/) and [freegeoip.net](https://freegeoip.net/)
 
 == Installation ==
 
