@@ -93,10 +93,10 @@ Yes of course.
 
 == Changelog ==
 
-= Version 1.0.0 (31th July 2016) =
+= Version 1.0.0 (1st August 2017) =
 * Initial release
 
 == Upgrade Notice ==
 
-= Version 1.0.0 (31th July 2016) =
+= Version 1.0.0 (1st August 2017) =
 * Initial release
