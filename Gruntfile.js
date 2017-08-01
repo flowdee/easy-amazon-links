@@ -85,6 +85,7 @@ module.exports = function (grunt) {
                     beautify: true
                 },
                 src: [
+                    'node_modules/js-cookie/src/js.cookie.js',
                     'assets/js/components/geotargeting.js',
                     'assets/js/scripts.js'
                 ],

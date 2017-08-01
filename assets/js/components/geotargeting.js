@@ -16,7 +16,19 @@ jQuery(document).ready(function ($) {
         var targetStore = '';
         var targetTrackingId = '';
 
-        getVisitorCountry();
+        var EALCookies = Cookies.noConflict(); // https://github.com/js-cookie/js-cookie
+        var geotargetingCookie = EALCookies.get('eal-geotargeting');
+
+        console.log('geotargetingCookie: ' + geotargetingCookie);
+
+        if ( geotargetingCookie !== undefined ) {
+            console.log('cookie set');
+            visitorCountry = geotargetingCookie;
+            handleGeotargeting();
+        } else {
+            console.log('cookie NOT set');
+            getVisitorCountry();
+        }
     }
 
     /**
@@ -39,6 +51,8 @@ jQuery(document).ready(function ($) {
                 visitorCountry = response.country;
                 if (typeof visitorCountry === 'undefined') {
                     visitorCountry = '';
+                } else {
+                    setGeotargetingCookie( visitorCountry );
                 }
 
                 handleGeotargeting();
@@ -70,6 +84,8 @@ jQuery(document).ready(function ($) {
                 visitorCountry = response.country_code;
                 if (typeof visitorCountry === 'undefined') {
                     visitorCountry = '';
+                } else {
+                    setGeotargetingCookie( visitorCountry );
                 }
                 handleGeotargeting();
             })
@@ -149,5 +165,10 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    function setGeotargetingCookie( countryCode ) {
+
+        if ( countryCode )
+            EALCookies.set('eal-geotargeting', countryCode );
+    }
 
 });
