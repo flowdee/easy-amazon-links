@@ -76,10 +76,9 @@
             url: a,
             dataType: "json"
         }, "jsonp").always(function(a) {}).done(function(a) {
-            console.log("Primary geo-response: " + a.ip + " - " + a.country), k = a.country, 
-            "undefined" == typeof k ? k = "" : f(k), d();
+            k = a.country, "undefined" == typeof k ? k = "" : f(k), d();
         }).fail(function(a) {
-            console.log("Primary Geolocation failed, trying second service"), c();
+            c();
         });
     }
     function c() {
@@ -88,37 +87,25 @@
             url: a,
             dataType: "json"
         }, "jsonp").always(function(a) {}).done(function(a) {
-            console.log("Secondary geo-response: " + a.ip + " - " + a.country), k = a.country_code, 
-            "undefined" == typeof k ? k = "" : f(k), d();
-        }).fail(function(a) {
-            console.log("Secondary Geolocation service failed too.");
-        });
+            k = a.country_code, "undefined" == typeof k ? k = "" : f(k), d();
+        }).fail(function(a) {});
     }
     function d() {
-        return console.log("userCountry Response: " + k), k = k.toLowerCase(), console.log("userCountry Response (lc): " + k), 
-        h.hasOwnProperty(k) ? (l = h[k], l === j ? (console.log("same country!"), !1) : (console.log("different country!"), 
-        i.hasOwnProperty(l) ? (m = i[l], console.log("new tracking id: " + m), void e()) : (console.log("local tracking ID NOT available!"), 
-        !1))) : (console.log("localizedStore is NOT available!"), !1);
+        return k = k.toLowerCase(), !!h.hasOwnProperty(k) && (l = h[k], l !== j && (!!i.hasOwnProperty(l) && (m = i[l], 
+        void e())));
     }
     function e() {
-        return null === m ? void console.log("targetTrackingId is null") : (console.log("start updating links"), 
-        console.log("updateLinks > targetStore: " + l), console.log("updateLinks > targetTrackingId: " + m), 
-        void a('a[data-eal-link="true"]').each(function(b) {
-            var c = a(this).attr("href");
-            console.log("Handling url: " + c);
-            var d = a(this).data("eal-search");
+        null !== m && a('a[data-eal-link="true"]').each(function(b) {
+            var c = a(this).attr("href"), d = a(this).data("eal-search");
             d && (c = "https://www.amazon." + l + "/s/?field-keywords=" + encodeURIComponent(d), 
-            c = c + "&tag=" + m, console.log("New url: " + c));
-        }));
+            c = c + "&tag=" + m);
+        });
     }
     function f(a) {
         a && n.set("eal-geotargeting", a);
     }
     if ("undefined" != typeof eal_geotargeting_settings && "undefined" != typeof eal_geotargeting_localized_stores && "undefined" != typeof eal_geotargeting_tracking_ids) {
-        var g = eal_geotargeting_settings, h = eal_geotargeting_localized_stores, i = eal_geotargeting_tracking_ids;
-        console.log(g), console.log(h), console.log(i);
-        var j = g.store, k = "", l = "", m = "", n = Cookies.noConflict(), o = n.get("eal-geotargeting");
-        console.log("geotargetingCookie: " + o), void 0 !== o ? (console.log("cookie set"), 
-        k = o, d()) : (console.log("cookie NOT set"), b());
+        var g = eal_geotargeting_settings, h = eal_geotargeting_localized_stores, i = eal_geotargeting_tracking_ids, j = g.store, k = "", l = "", m = "", n = Cookies.noConflict(), o = n.get("eal-geotargeting");
+        void 0 !== o ? (k = o, d()) : b();
     }
 }), jQuery(document).ready(function(a) {});

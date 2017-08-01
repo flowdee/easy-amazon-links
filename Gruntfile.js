@@ -56,6 +56,11 @@ module.exports = function (grunt) {
             }
         },
         uglify: {
+            options: {
+                compress: {
+                    drop_console: true // TODO: Removing console logs from final output
+                }
+            },
             admin: {
                 options: {
                     beautify: true
