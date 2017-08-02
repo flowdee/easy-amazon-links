@@ -1,7 +1,7 @@
 === Easy Amazon Links ===
 Contributors: flowdee
 Donate link: https://donate.flowdee.de
-Tags: amazon, affiliate, geotargeting, flowdee
+Tags: amazon, affiliate, Amazon Associate, Amazon Associates, amazon link
 Requires at least: 3.5.1
 Tested up to: 4.8.0
 Stable tag: 1.0.0
@@ -74,6 +74,24 @@ The installation and configuration of the plugin is as simple as it can be.
 Go to your post/page editor, mark a text and hit our TinyMCE button.
 
 Alternatively you can use our shortcode: e.g. [eal]Amazon Echo Dot[/eal]
+
+= What shortcodes are available? =
+
+The default shortcode looks as follows:
+
+[eal]Amazon Echo Dot[/eal]
+
+Sometimes the link text must be different, which can be done as follows:
+
+[eal search="amazon echo dot case"]Best Echo Dot Cases[/eal]
+
+Additionally the link title can be updated as follows:
+
+[eal title="View Ecto Dot Cases on Amazon"]Best Echo Dot Cases[/eal]
+
+In case you want to link a certain product detail page, pass the ASIN over to the shortcode:
+
+[eal asin="B01DFKC2SO"]Amazon Echo Dot[/eal] or [eal asin="B01DFKC2SO"]Get your Echo Dot here[/eal]
 
 = How does geotargeting work exactly? =
 
