@@ -29,8 +29,7 @@ function eal_debug( $args, $title = false ) {
 
     if ( $args ) {
         echo '<pre>';
-        print_r($args);
+        print_r( $args );
         echo '</pre>';
     }
 }
-

@@ -19,7 +19,7 @@ function eal_tinymce_buttons() {
         return;
     }
 
-    if ( get_user_option( 'rich_editing' ) !== 'true' ) {
+    if ( 'true' !== get_user_option( 'rich_editing' ) ) {
         return;
     }
 

@@ -62,16 +62,16 @@ function eal_get_amazon_stores() {
 function eal_get_amazon_associates_links() {
 
     $associate_links = array(
-        'de' => 'https://partnernet.amazon.de/',
-        'com' => 'https://affiliate-program.amazon.com/',
-        'co.uk' => 'https://affiliate-program.amazon.co.uk/',
-        'ca' => 'https://associates.amazon.ca/',
-        'fr' => 'https://partenaires.amazon.fr/',
-        'co.jp' => 'https://affiliate.amazon.co.jp/',
-        'it' => 'https://programma-affiliazione.amazon.it/',
-        'cn' => 'https://associates.amazon.cn/',
-        'es' => 'https://afiliados.amazon.es/',
-        'in' => 'https://affiliate-program.amazon.in/',
+        'de'     => 'https://partnernet.amazon.de/',
+        'com'    => 'https://affiliate-program.amazon.com/',
+        'co.uk'  => 'https://affiliate-program.amazon.co.uk/',
+        'ca'     => 'https://associates.amazon.ca/',
+        'fr'     => 'https://partenaires.amazon.fr/',
+        'co.jp'  => 'https://affiliate.amazon.co.jp/',
+        'it'     => 'https://programma-affiliazione.amazon.it/',
+        'cn'     => 'https://associates.amazon.cn/',
+        'es'     => 'https://afiliados.amazon.es/',
+        'in'     => 'https://affiliate-program.amazon.in/',
         'com.br' => 'https://associados.amazon.com.br/',
         'com.mx' => 'https://afiliados.amazon.com.mx/gp/associates/join/landing/main.html'
     );

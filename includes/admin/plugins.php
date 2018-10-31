@@ -20,7 +20,7 @@ function eal_action_links( $links, $file ) {
 
     $settings_link = '<a href="' . admin_url( 'options-general.php?page=' . EAL_SETTINGS_PAGE_SLUG ) . '">' . esc_html__( 'Settings', 'easy-amazon-links' ) . '</a>';
 
-    if ( $file == 'easy-amazon-links/easy-amazon-links.php' )
+    if ( 'easy-amazon-links/easy-amazon-links.php' == $file )
         array_unshift( $links, $settings_link );
 
     return $links;
@@ -36,7 +36,7 @@ add_filter( 'plugin_action_links', 'eal_action_links', 10, 2 );
  */
 function eal_row_meta( $input, $file ) {
 
-    if ( $file != 'easy-amazon-links/easy-amazon-links.php' )
+    if ( 'easy-amazon-links/easy-amazon-links.php' != $file )
         return $input;
 
     $custom_link = esc_url( add_query_arg( array(

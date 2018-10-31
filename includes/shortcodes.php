@@ -25,11 +25,11 @@ function eal_add_shortcode( $atts, $content = '' ) {
 
     $options = eal_get_options();
 
-    $link_text = ( ! empty( $atts['text'] ) ) ? $atts['text'] : $content;
+    $link_text  = ( ! empty( $atts['text'] ) ) ? $atts['text'] : $content;
     $link_title = ( ! empty( $atts['title'] ) ) ? $atts['title'] : $link_text;
 
     // Types
-    $link_asin = ( ! empty( $atts['asin'] ) ) ? $atts['asin'] : false;
+    $link_asin   = ( ! empty( $atts['asin'] ) ) ? $atts['asin'] : false;
     $link_search = ( ! empty( $atts['search'] ) ) ? $atts['search'] : $link_text;
 
     if ( $link_asin ) {
@@ -69,4 +69,3 @@ function eal_add_shortcode( $atts, $content = '' ) {
     return $content;
 }
 add_shortcode( 'eal', 'eal_add_shortcode' );
-

@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function eal_filter_content( $content ) {
 
-    //$content = str_replace('<span class="eal-link">', '<span class="eal-link" data-eal-link="true">', $content );
-    $content = preg_replace('/<span data-eal-link="true">(.*?)<\/span>/', '[eal]$1[/eal]', $content );
+    //$content = str_replace( '<span class="eal-link">', '<span class="eal-link" data-eal-link="true">', $content );
+    $content = preg_replace( '/<span data-eal-link="true">(.*?)<\/span>/', '[eal]$1[/eal]', $content );
 
     return $content;
 }
@@ -53,7 +53,7 @@ function eal_embed_geotargeting_script_data() {
             $tracking_ids[$store_key] = $options['amazon_tracking_ids'][$store_key];
     }
 
-    if ( sizeof( $tracking_ids ) == 0 )
+    if ( 0 == sizeof( $tracking_ids ) )
         return;
 
     // Collect localized stores

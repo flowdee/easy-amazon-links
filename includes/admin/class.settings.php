@@ -9,9 +9,9 @@
  */
 
 // Exit if accessed directly
-if (!defined('ABSPATH')) exit;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
-if (!class_exists('Easy_Amazon_Links_Settings')) {
+if ( ! class_exists( 'Easy_Amazon_Links_Settings' ) ) {
 
     class Easy_Amazon_Links_Settings
     {
@@ -20,11 +20,11 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
         public function __construct()
         {
             // Options
-            $this->options = get_option('eal_settings');
+            $this->options = get_option( 'eal_settings' );
 
             // Initialize
-            add_action('admin_menu', array( &$this, 'add_admin_menu') );
-            add_action('admin_init', array( &$this, 'init_settings') );
+            add_action( 'admin_menu', array( &$this, 'add_admin_menu' ) );
+            add_action( 'admin_init', array( &$this, 'init_settings' ) );
         }
 
         function add_admin_menu()
@@ -54,7 +54,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             // Section: Quickstart
             add_settings_section(
                 'eal_settings_section_quickstart',
-                __('Quickstart Guide', 'easy-amazon-links'),
+                __( 'Quickstart Guide', 'easy-amazon-links' ),
                 array( &$this, 'section_quickstart_render' ),
                 'eal_settings'
             );
@@ -62,7 +62,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             // Section: Amazon Tracking IDs
             add_settings_section(
                 'eal_section_amazon_tracking_ids',
-                __('Amazon Tracking IDs', 'easy-amazon-links'),
+                __( 'Amazon Tracking IDs', 'easy-amazon-links' ),
                 false,
                 'eal_settings'
             );
@@ -86,45 +86,45 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             // Section: General
             add_settings_section(
                 'eal_section_general',
-                __('General Settings', 'easy-amazon-links'),
+                __( 'General Settings', 'easy-amazon-links' ),
                 array( &$this, 'section_qeneral_render' ),
                 'eal_settings'
             );
 
             add_settings_field(
                 'eal_amazon_store',
-                __('Amazon Store', 'easy-amazon-links'),
-                array(&$this, 'amazon_store_render'),
+                __( 'Amazon Store', 'easy-amazon-links' ),
+                array( &$this, 'amazon_store_render' ),
                 'eal_settings',
                 'eal_section_general',
-                array('label_for' => 'eal_amazon_store')
+                array( 'label_for' => 'eal_amazon_store' )
             );
 
             add_settings_field(
                 'eal_status',
-                __('Status', 'easy-amazon-links'),
-                array(&$this, 'status_render'),
+                __( 'Status', 'easy-amazon-links' ),
+                array( &$this, 'status_render' ),
                 'eal_settings',
                 'eal_section_general',
-                array('label_for' => 'eal_status')
+                array( 'label_for' => 'eal_status' )
             );
 
             add_settings_field(
                 'eal_link_icon',
-                __('Link Icon', 'easy-amazon-links'),
-                array(&$this, 'link_icon_render'),
+                __( 'Link Icon', 'easy-amazon-links' ),
+                array( &$this, 'link_icon_render' ),
                 'eal_settings',
                 'eal_section_general',
-                array('label_for' => 'eal_link_icon')
+                array( 'label_for' => 'eal_link_icon' )
             );
 
             add_settings_field(
                 'eal_geotargeting',
-                __('Geotargeting', 'easy-amazon-links'),
-                array(&$this, 'geotargeting_render'),
+                __( 'Geotargeting', 'easy-amazon-links' ),
+                array( &$this, 'geotargeting_render' ),
                 'eal_settings',
                 'eal_section_general',
-                array('label_for' => 'eal_geotargeting')
+                array( 'label_for' => 'eal_geotargeting' )
             );
 
         }
@@ -142,7 +142,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             ?>
 
             <div class="postbox">
-                <h3 class='hndle'><?php _e('Quickstart Guide', 'easy-amazon-links'); ?></h3>
+                <h3 class='hndle'><?php _e( 'Quickstart Guide', 'easy-amazon-links' ); ?></h3>
                 <div class="inside">
                     <p>
                         <strong><?php _e( 'Plugin Configuration', 'easy-amazon-links' ); ?></strong>
@@ -218,7 +218,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
                    name="eal_settings[amazon_tracking_ids][<?php echo $args['store']; ?>]"
                    value="<?php echo esc_attr( trim( $tracking_id ) ); ?>" />
             &nbsp;
-            <small><a href="<?php echo $associates_links[$args['store']]; ?>" target="_blank" rel="nofollow"><?php _e('Get local Tracking ID', 'easy-amazon-links'); ?></a></small>
+            <small><a href="<?php echo $associates_links[$args['store']]; ?>" target="_blank" rel="nofollow"><?php _e( 'Get local Tracking ID', 'easy-amazon-links' ); ?></a></small>
             <?php
         }
 
@@ -237,7 +237,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
 
             ?>
             <select id="eal_amazon_store" name="eal_settings[amazon_store]" data-eal-select-amazon-store="true" required="required">
-                <option value=""><?php _e('Please select...', 'easy-amazon-links' ); ?></option>
+                <option value=""><?php _e( 'Please select...', 'easy-amazon-links' ); ?></option>
                 <?php foreach ( $stores as $store_key => $store_label ) { ?>
                     <?php
                     $store_selected = false;
@@ -256,7 +256,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
                 <?php } ?>
             </select>
             <p class="description<?php if ( empty( $store ) ) echo ' eal-req'; ?>">
-                <?php _e('Please select your default Amazon store.', 'easy-amazon-links' ); ?>
+                <?php _e( 'Please select your default Amazon store.', 'easy-amazon-links' ); ?>
             </p>
             <?php
         }
@@ -266,17 +266,17 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             $status = ( isset ( $this->options['status'] ) && $this->options['status'] == '1' ) ? 1 : 0;
             ?>
 
-            <input type="checkbox" id="eal_status" name="eal_settings[status]" value="1" <?php echo($status == 1 ? 'checked' : ''); ?> />
-            <label for="eal_status"><?php _e('Activate in order to generate affiliate links', 'easy-amazon-links'); ?></label>
+            <input type="checkbox" id="eal_status" name="eal_settings[status]" value="1" <?php echo($status == 1 ? 'checked' : '' ); ?> />
+            <label for="eal_status"><?php _e( 'Activate in order to generate affiliate links', 'easy-amazon-links' ); ?></label>
             <?php
         }
 
         function link_icon_render() {
 
             $link_icon_options = array(
-                '' => __('Disabled', 'easy-amazon-links'),
-                'icon' => __('Amazon Icon', 'easy-amazon-links'),
-                'logo' => __('Amazon Logo', 'easy-amazon-links')
+                '' => __( 'Disabled', 'easy-amazon-links' ),
+                'icon' => __( 'Amazon Icon', 'easy-amazon-links' ),
+                'logo' => __( 'Amazon Logo', 'easy-amazon-links' )
             );
 
             $link_icon = ( isset ( $this->options['link_icon'] ) ) ? $this->options['link_icon'] : '';
@@ -295,10 +295,10 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
             $geotargeting = ( isset ( $this->options['geotargeting'] ) && $this->options['geotargeting'] == '1' ) ? 1 : 0;
             ?>
 
-            <input type="checkbox" id="eal_geotargeting" name="eal_settings[geotargeting]" value="1" <?php echo($geotargeting == 1 ? 'checked' : ''); ?> />
-            <label for="eal_geotargeting"><?php _e('Activate in order to geotargeting functionality', 'easy-amazon-links'); ?></label>
+            <input type="checkbox" id="eal_geotargeting" name="eal_settings[geotargeting]" value="1" <?php echo($geotargeting == 1 ? 'checked' : '' ); ?> />
+            <label for="eal_geotargeting"><?php _e( 'Activate in order to geotargeting functionality', 'easy-amazon-links' ); ?></label>
             <p class="description">
-                <?php _e('In order to redirect your site visitors to their nearest Amazon store, the plugin needs to find out their country. This is done by passing their IP to the API of the following services:', 'easy-amazon-links' ); ?>
+                <?php _e( 'In order to redirect your site visitors to their nearest Amazon store, the plugin needs to find out their country. This is done by passing their IP to the API of the following services:', 'easy-amazon-links' ); ?>
                  <a href="https://ipinfo.io" target="_blank" rel="nofollow">ipinfo.io</a>, <a href="https://freegeoip.net/" target="_blank" rel="nofollow">freegeoip.net</a>
             </p>
             <?php
@@ -310,7 +310,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
 
             <div class="eal eal-settings">
                 <div class="wrap">
-                    <h2><?php _e('Easy Amazon Links', 'easy-amazon-links'); ?></h2>
+                    <h2><?php _e( 'Easy Amazon Links', 'easy-amazon-links' ); ?></h2>
 
                     <div id="poststuff">
                         <div id="post-body" class="metabox-holder columns-2">
@@ -318,11 +318,11 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
                                 <div class="meta-box-sortables ui-sortable">
                                     <form action="options.php" method="post">
                                         <?php
-                                        settings_fields('eal_settings');
-                                        eal_do_settings_sections('eal_settings');
+                                        settings_fields( 'eal_settings' );
+                                        eal_do_settings_sections( 'eal_settings' );
                                         ?>
 
-                                        <p><?php submit_button('Save Changes', 'button-primary', 'submit', false); ?></p>
+                                        <p><?php submit_button( 'Save Changes', 'button-primary', 'submit', false ); ?></p>
                                     </form>
                                 </div>
 
@@ -334,7 +334,7 @@ if (!class_exists('Easy_Amazon_Links_Settings')) {
                                     /*
                                      * require_once WP_UDEMY_DIR . 'includes/libs/flowdee_infobox.php';
                                     $flowdee_infobox = new Flowdee_Infobox();
-                                    $flowdee_infobox->set_plugin_slug('udemy');
+                                    $flowdee_infobox->set_plugin_slug( 'udemy' );
                                     $flowdee_infobox->display();
                                     */
                                     ?>
@@ -356,7 +356,7 @@ new Easy_Amazon_Links_Settings();
 /**
  * Custom settings section output
  * 
- * Replacing: do_settings_sections('eal_settings');
+ * Replacing: do_settings_sections( 'eal_settings' );
  * 
  * @param $page
  */

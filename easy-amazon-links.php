@@ -16,9 +16,9 @@
  */
 
 // Exit if accessed directly
-if( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
-if( ! class_exists( 'Easy_Amazon_Links' ) ) {
+if ( ! class_exists( 'Easy_Amazon_Links' ) ) {
 
     /**
      * Main Easy_Amazon_Links class
@@ -42,7 +42,7 @@ if( ! class_exists( 'Easy_Amazon_Links' ) ) {
          * @return      object self::$instance The one true Easy_Amazon_Links
          */
         public static function instance() {
-            if( !self::$instance ) {
+            if ( ! self::$instance ) {
                 self::$instance = new Easy_Amazon_Links();
                 self::$instance->setup_constants();
                 self::$instance->includes();
@@ -121,13 +121,13 @@ if( ! class_exists( 'Easy_Amazon_Links' ) ) {
             $mofile = sprintf( '%1$s-%2$s.mo', 'easy-amazon-links', $locale );
 
             // Setup paths to current locale file
-            $mofile_local   = $lang_dir . $mofile;
-            $mofile_global  = WP_LANG_DIR . '/easy-amazon-links/' . $mofile;
+            $mofile_local  = $lang_dir . $mofile;
+            $mofile_global = WP_LANG_DIR . '/easy-amazon-links/' . $mofile;
 
-            if( file_exists( $mofile_global ) ) {
+            if ( file_exists( $mofile_global ) ) {
                 // Look in global /wp-content/languages/easy-amazon-links/ folder
                 load_textdomain( 'easy-amazon-links', $mofile_global );
-            } elseif( file_exists( $mofile_local ) ) {
+            } elseif ( file_exists( $mofile_local ) ) {
                 // Look in local /wp-content/plugins/easy-amazon-links/languages/ folder
                 load_textdomain( 'easy-amazon-links', $mofile_local );
             } else {
